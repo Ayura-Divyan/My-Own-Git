@@ -12,4 +12,10 @@ import re
 import sys
 import zlib
 
+#Setting up Argument Parser
 argparser = argparse.ArgumentParser(description="Wyag - Write Your Apps in Git")
+
+
+#Handling Subcommands (like init, add, commit, etc.)
+argsubparsers = argparser.add_subparsers(title="Commands", dest="command")
+argsubparsers.required = True
